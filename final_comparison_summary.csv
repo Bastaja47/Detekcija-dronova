@@ -1,0 +1,5 @@
+Metrika,Baseline,AutoML,Razlika
+Accuracy,0.9316,0.9406,0.0089
+Macro F1,0.8894,0.9074,0.0180
+Macro Recall,0.8421,0.8721,0.0300
+DJI Recall (najteža klasa),0.6900,0.7781,0.0881

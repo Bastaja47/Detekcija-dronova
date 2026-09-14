@@ -1,0 +1,22 @@
+# Virtuelno okruzenje
+venv/
+__pycache__/
+*.pyc
+
+# Dataset - PREVELIK za git (desetine GB), i nije nas da ga delimo
+# Profesor moze da preuzme isti dataset sa Kaggle-a (link u README.md)
+dataset.pt
+
+# Backup fajlova sa komentarima (napravljen od toggle_comments.py)
+# OVO JE NAMERNO OVDE - da se nikad slucajno ne okaci na git
+_backup_sa_komentarima/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS specificno
+.DS_Store
+Thumbs.db
+
+Projekat (1).pdf
+Sta je uradjeno/

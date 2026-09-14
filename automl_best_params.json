@@ -1,0 +1,7 @@
+{
+  "num_conv_layers": 4,
+  "base_filters": 32,
+  "batch_size": 32,
+  "dropout_rate": 0.22197109800841963,
+  "learning_rate": 0.0007171452785079131
+}
