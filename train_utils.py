@@ -1,9 +1,9 @@
 """
 train_utils.py
 
-Deljena funkcija za trening modela sa early stopping-om.
+Deljena funkcija za trening modela sa early stopping-om
 Koristi se i za baseline i za AutoML finalni model, da bi poređenje bilo fer
-(isti postupak treniranja za oba).
+(isti postupak treniranja za oba)
 """
 
 import torch
@@ -14,17 +14,17 @@ def train_with_early_stopping(model, train_loader, val_loader, criterion, optimi
     """
     Trening petlja sa early stopping-om.
 
-    Prati validacioni loss kroz epohe. Ako se val_loss NE POBOLJŠA kroz
-    'patience' uzastopnih epoha, trening se PREKIDA - dalje treniranje
-    bi samo overfitovalo (videli smo taj obrazac kod oba modela do sad).
+    Prati validacioni loss kroz epohe. Ako se val_loss ne poboljsa kroz
+    'patience' uzastopnih epoha, trening se prekida - dalje treniranje
+    bi samo overfitovalo - to mi se desilo prvi pit
 
-    Čuva NAJBOLJE težine modela (na osnovu najnižeg val_loss), ne poslednje
+    Čuva najbolje težine modela (na osnovu najnižeg val_loss), ne poslednje
     epohe - ovo rešava problem koji smo primetili (poslednja epoha nije
-    uvek najbolja).
+    uvek najbolja!!!)
 
     Vraća:
         history - dict sa listama metrika kroz sve odrađene epohe (za grafik)
-        best_model_state - state_dict NAJBOLJE verzije modela
+        best_model_state - state_dict najbolje verzije modela
     """
     best_val_loss = float('inf')
     epochs_without_improvement = 0
